@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:chest"
+    },
+    {
+      "item": "minecraft:trapped_chest"
+    }
+  ],
+  "result": {
+    "item": "sbmtrollchest:troll_chest"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "particle": "blocks/planks_oak"
+    }
+}

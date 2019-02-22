@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "sbmtrollchest:troll_chest" },
+        "facing=south": { "model": "sbmtrollchest:troll_chest", "y": 180 },
+        "facing=west":  { "model": "sbmtrollchest:troll_chest", "y": 270 },
+        "facing=east":  { "model": "sbmtrollchest:troll_chest", "y": 90 }
+    }
+}
