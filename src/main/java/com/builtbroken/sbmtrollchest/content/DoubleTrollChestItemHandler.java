@@ -1,11 +1,10 @@
-package com.builtbroken.sbmtrollchest.inventory;
+package com.builtbroken.sbmtrollchest.content;
 
 import java.lang.ref.WeakReference;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import com.builtbroken.sbmtrollchest.tileentity.TileEntityTrollChest;
 import com.google.common.base.Objects;
 
 import net.minecraft.block.Block;

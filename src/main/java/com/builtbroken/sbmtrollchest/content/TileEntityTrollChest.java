@@ -1,12 +1,10 @@
-package com.builtbroken.sbmtrollchest.tileentity;
+package com.builtbroken.sbmtrollchest.content;
 
 import java.util.List;
 
 import javax.annotation.Nullable;
 
 import com.builtbroken.sbmtrollchest.TrollChestConfig;
-import com.builtbroken.sbmtrollchest.block.BlockTrollChest;
-import com.builtbroken.sbmtrollchest.inventory.DoubleTrollChestItemHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
@@ -309,9 +307,10 @@ public class TileEntityTrollChest extends TileEntityLockableLoot implements ITic
     @Override
     public void update()
     {
-        //troll logic
+        //troll logic, only execute when there is at least one stack in the chest and noone is looking into it
         if(!world.isRemote && numPlayersUsing == 0 && !isEmpty())
         {
+            //for each item stack in the inventory
             for(int i = 0; i < getSizeInventory(); i++)
             {
                 ItemStack stack = getStackInSlot(i);
@@ -327,10 +326,11 @@ public class TileEntityTrollChest extends TileEntityLockableLoot implements ITic
                     else
                         tpToPlayerInventory(stack);
 
-                    setInventorySlotContents(i, ItemStack.EMPTY);
+                    setInventorySlotContents(i, ItemStack.EMPTY); //remove the stack from the troll chest
                 }
             }
         }
+        //troll logic end
 
         this.checkForAdjacentChests();
         int i = this.pos.getX();

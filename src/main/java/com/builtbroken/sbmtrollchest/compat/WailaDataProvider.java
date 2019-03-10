@@ -3,7 +3,7 @@ package com.builtbroken.sbmtrollchest.compat;
 import java.util.List;
 
 import com.builtbroken.sbmtrollchest.TrollChest;
-import com.builtbroken.sbmtrollchest.block.BlockTrollChest;
+import com.builtbroken.sbmtrollchest.content.BlockTrollChest;
 
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
@@ -26,7 +26,7 @@ public class WailaDataProvider implements IWailaDataProvider
     @Override
     public ItemStack getWailaStack(IWailaDataAccessor data, IWailaConfigHandler config)
     {
-        return TrollChest.CHEST_STACK;
+        return TrollChest.CHEST_STACK; //display information as if the displayed stack was this
     }
 
     @Override

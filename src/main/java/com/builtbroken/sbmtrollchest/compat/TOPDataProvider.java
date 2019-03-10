@@ -5,7 +5,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.builtbroken.sbmtrollchest.TrollChest;
-import com.builtbroken.sbmtrollchest.block.BlockTrollChest;
+import com.builtbroken.sbmtrollchest.content.BlockTrollChest;
 
 import mcjty.theoneprobe.api.IBlockDisplayOverride;
 import mcjty.theoneprobe.api.IProbeHitData;
@@ -25,6 +25,7 @@ public class TOPDataProvider implements Function<ITheOneProbe, Void>
     @Override
     public Void apply(ITheOneProbe theOneProbe)
     {
+        //overrides the complete standard top display
         theOneProbe.registerBlockDisplayOverride(new IBlockDisplayOverride() {
             @Override
             public boolean overrideStandardInfo(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world, IBlockState blockState, IProbeHitData data)
@@ -32,10 +33,10 @@ public class TOPDataProvider implements Function<ITheOneProbe, Void>
                 if(blockState.getBlock() instanceof BlockTrollChest)
                 {
                     probeInfo.horizontal()
-                    .item(TrollChest.CHEST_STACK)
-                    .vertical()
-                    .itemLabel(TrollChest.CHEST_STACK)
-                    .text(text);
+                    .item(TrollChest.CHEST_STACK) //stack to display
+                    .vertical() //vertical alignment
+                    .itemLabel(TrollChest.CHEST_STACK) //displays the item's name
+                    .text(text); //the blue "Minecraft" text
                     return true;
                 }
 

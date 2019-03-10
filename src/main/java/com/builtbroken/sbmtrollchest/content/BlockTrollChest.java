@@ -1,9 +1,8 @@
-package com.builtbroken.sbmtrollchest.block;
+package com.builtbroken.sbmtrollchest.content;
 
 import javax.annotation.Nullable;
 
 import com.builtbroken.sbmtrollchest.TrollChest;
-import com.builtbroken.sbmtrollchest.tileentity.TileEntityTrollChest;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;

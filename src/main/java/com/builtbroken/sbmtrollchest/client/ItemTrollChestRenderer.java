@@ -1,7 +1,7 @@
-package com.builtbroken.sbmtrollchest.renderer;
+package com.builtbroken.sbmtrollchest.client;
 
 import com.builtbroken.sbmtrollchest.TrollChest;
-import com.builtbroken.sbmtrollchest.tileentity.TileEntityTrollChest;
+import com.builtbroken.sbmtrollchest.content.TileEntityTrollChest;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
@@ -15,8 +15,8 @@ public class ItemTrollChestRenderer extends TileEntityItemStackRenderer
     @Override
     public void renderByItem(ItemStack item)
     {
-        if(Block.getBlockFromItem(item.getItem()) == TrollChest.trollChest)
-            TileEntityRendererDispatcher.instance.render(dummy, 0.0D, 0.0D, 0.0D, 0.0F);
+        if(Block.getBlockFromItem(item.getItem()) == TrollChest.trollChest) //just to be sure
+            TileEntityRendererDispatcher.instance.render(dummy, 0.0D, 0.0D, 0.0D, 0.0F); //use the te rendering code
         else
             super.renderByItem(item);
     }

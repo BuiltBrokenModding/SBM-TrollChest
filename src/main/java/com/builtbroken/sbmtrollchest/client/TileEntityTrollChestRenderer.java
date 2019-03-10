@@ -1,8 +1,8 @@
-package com.builtbroken.sbmtrollchest.renderer;
+package com.builtbroken.sbmtrollchest.client;
 
 import java.util.Calendar;
 
-import com.builtbroken.sbmtrollchest.tileentity.TileEntityTrollChest;
+import com.builtbroken.sbmtrollchest.content.TileEntityTrollChest;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
